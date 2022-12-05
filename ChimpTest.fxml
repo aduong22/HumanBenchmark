@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane   fx:id="root"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ManyPages.ChimpTest"
+        style="-fx-background-image:
+        url('/Images/ChimpTest/welcome.jpg'); -fx-background-size: 1000 600"
+        stylesheets="/FXMLpages/custom.css"
+        prefHeight="600" prefWidth="1000">
+    <GridPane fx:id="numList"
+              layoutX="100" layoutY="100"
+              alignment="CENTER"
+              prefWidth="800" prefHeight="400"/>
+    <Button fx:id="start" text="Start Test"
+            prefWidth="120" prefHeight="40"
+            layoutX="440" layoutY="420"
+            onAction="#chimpTestClicked"/>
+    <Label  fx:id="numTextLabel" text="NUMBERS"
+            prefWidth="200" alignment="CENTER"
+            style="-fx-font-size: 25; -fx-text-fill: white"
+            layoutX="400" layoutY="150"/>
+    <Label  fx:id="result" text="4" alignment="CENTER"
+            prefWidth="100" textAlignment="CENTER"
+            layoutX="450"
+            style="-fx-text-fill: white; -fx-font-size: 80"/>
+    <Label  fx:id="strike"
+            prefWidth="200" alignment="CENTER"
+            layoutX="400" layoutY="310" textAlignment="CENTER"
+            style="-fx-text-fill: white; -fx-font-size: 30"/>
+    <Button text="HUMAN BENCHMARK"
+            prefHeight="30"
+            focusTraversable="false"
+            onAction="#backToHomePage"/>
+</Pane>

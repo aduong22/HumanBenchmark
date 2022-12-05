@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane   fx:id="root"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ManyPages.ColorMatch"
+        style="-fx-background-color: #2b87d1"
+        stylesheets="/FXMLpages/custom.css"
+        prefHeight="600" prefWidth="1000">
+
+    <Button fx:id="start" text="Start"
+            prefWidth="100"
+            layoutX="450"  layoutY="400"
+            onAction="#colorMatchingClicked"/>
+    <Label  fx:id="description" text="Does the word meaning on top match with the text color at the bottom?"
+            prefWidth="1000"  alignment="CENTER"
+            layoutY="100"
+            style="-fx-text-fill: white; -fx-font-size: 20"/>
+    <Label  fx:id="icon"
+            prefWidth="360" prefHeight="300"
+            layoutX="330" layoutY="-50"
+            style="-fx-background-image: url('/Images/ColorMatch/resultIcon.jpg')"/>
+    <Label  fx:id="scoreLabel" text="Score: 0"
+            prefWidth="200" alignment="CENTER"
+            layoutX="400" layoutY="50" textAlignment="CENTER"
+            style="-fx-text-fill: white; -fx-font-size: 30"/>
+    <Label  fx:id="timeLabel"
+            prefWidth="100" alignment="CENTER"
+            layoutX="450" layoutY="530"
+            style="-fx-text-fill: white; -fx-font-size: 20"/>
+    <Label  fx:id="meaningLabel" text="BLACK" alignment="CENTER"
+            prefWidth="300" prefHeight="120"
+            layoutX="350" layoutY="150"
+            style="-fx-text-fill: BLUE"/>
+    <Label  fx:id="colorLabel"  text="BLUE" alignment="CENTER"
+            prefWidth="300" prefHeight="120"
+            layoutX="350" layoutY="300"/>
+    <HBox   layoutX="400" layoutY="450"
+            spacing="40">
+        <Button fx:id="noBtn" text="NO"
+                prefWidth="80"
+                focusTraversable="false"
+                onAction="#noCheck"/>
+        <Button fx:id="yesBtn" text="YES"
+                prefWidth="80"
+                focusTraversable="false"
+                onAction="#yesCheck"/>
+    </HBox>
+    <Button text="HUMAN BENCHMARK"
+            prefHeight="30"
+            focusTraversable="false"
+            onAction="#backToHomePage"/>
+
+</Pane>

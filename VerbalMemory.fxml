@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane   fx:id="root"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ManyPages.VerbalMemory"
+        prefHeight="600" prefWidth="1000"
+        style="-fx-background-image: url('/Images/VerbalMem/welcome.jpg')"
+        stylesheets="/FXMLpages/custom.css">
+
+    <Label  fx:id="wordLabel"
+            prefWidth="600" alignment="CENTER"
+            layoutX="200" layoutY="250"
+            style="-fx-text-fill: white; -fx-font-size: 50"/>
+    <Label  fx:id="liveLabel"
+            prefWidth="100" alignment="CENTER"
+            layoutX="380" layoutY="180"
+            style="-fx-text-fill: white; -fx-font-size: 20"/>
+    <Label  fx:id="scoreLabel"
+            prefWidth="100" alignment="CENTER"
+            layoutX="520" layoutY="180"
+            style="-fx-text-fill: white; -fx-font-size: 20"/>
+    <Label  fx:id="resultLabel"
+            prefWidth="600" alignment="CENTER"
+            layoutX="200" layoutY="250"
+            style="-fx-text-fill: white; -fx-font-size: 70"/>
+    <Button fx:id="seenBtn" text="SEEN"
+            prefWidth="100" alignment="CENTER"
+            layoutX="380" layoutY="360"
+            style="-fx-font-size: 20; -fx-background-color: #ffd154"
+            onAction="#checkSeen"/>
+    <Button fx:id="newBtn" text="NEW"
+            prefWidth="100" alignment="CENTER"
+            layoutX="520" layoutY="360"
+            style="-fx-font-size: 20; -fx-background-color: #ffd154"
+            onAction="#checkNew"/>
+    <Button fx:id="start" text="Start"
+            prefWidth="100"
+            layoutX="450"  layoutY="400"
+            onAction="#verbalMemoryClicked"/>
+    <Button text="HUMAN BENCHMARK"
+            prefHeight="30"
+            focusTraversable="false"
+            onAction="#backToHomePage"/>
+</Pane>

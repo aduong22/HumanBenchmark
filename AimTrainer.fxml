@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane   fx:id="root"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ManyPages.AimTrainer"
+        style="-fx-background-color:#2b87d1"
+        stylesheets="/FXMLpages/custom.css"
+        prefHeight="600" prefWidth="1000">
+
+    <Button fx:id="start"
+            prefWidth="150"
+            layoutX="425" layoutY="370"
+            onAction="#aimTrainerClicked"/>
+    <Button fx:id="target"
+            prefWidth="100" prefHeight="100"
+            style="-fx-background-radius: 100;-fx-background-color: #2b87d1;
+                   -fx-background-image: url('/Images/AimTrainer/target.jpg')"
+            focusTraversable="false"
+            onAction="#targetClicked"/>
+    <Label fx:id="remain" text="Remaining"
+           prefWidth="300"
+           style="-fx-font-size: 30; -fx-text-fill: white"
+           layoutX="350" layoutY="20"
+           alignment="CENTER" textAlignment="CENTER"/>
+    <Button text="HUMAN BENCHMARK"
+            prefHeight="30"
+            focusTraversable="false"
+            onAction="#backToHomePage"/>
+</Pane>

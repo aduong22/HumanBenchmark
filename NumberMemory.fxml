@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.TextFlow?>
+<Pane fx:id="root"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ManyPages.NumberMemory"
+      style="-fx-background-color:#2b87d1"
+      stylesheets="/FXMLpages/custom.css"
+      prefHeight="600" prefWidth="1000">
+
+    <Label   fx:id="digitList"
+                prefWidth="500"
+                layoutX="250" layoutY="200" alignment="CENTER"
+                style="-fx-font-size: 50; -fx-text-fill: white"/>
+    <ProgressBar    fx:id="progressBar"
+                    prefHeight="4" prefWidth="80"
+                    layoutX="460" layoutY="300"/>
+    <TextField  fx:id="inputText"
+                prefWidth="500" prefHeight="60"
+                layoutX="250" layoutY="300"
+                alignment="CENTER"
+                style="-fx-font-size: 30;
+                -fx-background-color: #226cbb; -fx-text-fill: white"/>
+    <Button fx:id="submit" text="Submit"
+            prefWidth="120" alignment="CENTER"
+            layoutX="440" layoutY="400"
+            onAction="#compareDigits"/>
+    <Button fx:id="start" text="Start"
+            prefWidth="80"
+            layoutX="460" layoutY="400"
+            onAction="#numberMemoryClicked"/>
+    <TextFlow   fx:id="checkedText"
+                prefWidth="500" textAlignment="CENTER"
+                layoutX="250" layoutY="200"/>
+    <Label  fx:id="description" text="What was the number?"
+            prefWidth="400" alignment="CENTER"
+            layoutX="300" layoutY="220"
+            style="-fx-font-size: 25; -fx-text-fill: white"/>
+    <Label  fx:id="numberLabel" text="Number"
+            prefWidth="200" alignment="CENTER"
+            layoutX="400" layoutY="60"
+            style="-fx-text-fill: white; -fx-font-size: 20"
+            opacity="0.8"/>
+    <Label  fx:id="answLabel" text="Your answer"
+            prefWidth="200" alignment="CENTER"
+            layoutX="400" layoutY="180"
+            style="-fx-text-fill: white; -fx-font-size: 20"
+            opacity="0.8"/>
+    <Label  fx:id="level" text="Level 1"
+            prefWidth="1000" alignment="CENTER"
+            layoutY="265"
+            style="-fx-font-size: 80; -fx-text-fill: white "/>
+    <Pane   fx:id="mask"
+            prefWidth="1000" prefHeight="600"
+            visible="false"/>
+    <Button text="HUMAN BENCHMARK"
+            prefHeight="30"
+            focusTraversable="false"
+            onAction="#backToHomePage"/>
+</Pane>

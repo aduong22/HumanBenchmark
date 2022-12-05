@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ManyPages.Home"
+            style="-fx-background-size: 1000 600;-fx-background-image:
+            url('/Images/Home/welcome.jpg')"
+            stylesheets="/FXMLpages/custom.css"
+            prefHeight="600" prefWidth="1000">
+
+    <Button text="LOGIN"
+            prefHeight="30" prefWidth="80"
+            focusTraversable="false"
+            onAction="#loginClicked"/>
+
+    <GridPane   layoutX="110" layoutY="200"
+                alignment="CENTER"
+                vgap="20" hgap="20">
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="0" GridPane.columnIndex="0"
+                styleClass="roundBtn, react"
+                onAction="#reactionTimeClicked"/>
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="0" GridPane.columnIndex="1"
+                styleClass="roundBtn, aim"
+                onAction="#aimTrainerClicked"/>
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="0" GridPane.columnIndex="2"
+                styleClass="roundBtn, chimp"
+                onAction="#chimpTestClicked"/>
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="1" GridPane.columnIndex="0"
+                styleClass="roundBtn,visual"
+                onAction="#visualMemoryClicked"/>
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="0" GridPane.columnIndex="3"
+                styleClass="roundBtn, color"
+                onAction="#colorMatchingClicked"/>
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="1" GridPane.columnIndex="1"
+                styleClass="roundBtn, typing"
+                onAction="#typingClicked"/>
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="1" GridPane.columnIndex="2"
+                styleClass="roundBtn, number"
+                onAction="#numberMemoryClicked"/>
+        <Button prefWidth="180" prefHeight="150"
+                GridPane.rowIndex="1" GridPane.columnIndex="3"
+                styleClass="roundBtn, verbal"
+                onAction="#verbalMemoryClicked"/>
+    </GridPane>
+
+    <Label  text="NEW"
+            prefWidth="45" prefHeight="25"
+            layoutX="848" layoutY="197" alignment="CENTER"
+            style="-fx-text-fill: white;-fx-background-color: #ce2636; -fx-background-radius: 7"/>
+</Pane>

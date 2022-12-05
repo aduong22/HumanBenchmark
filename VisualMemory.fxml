@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane   fx:id="root"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ManyPages.VisualMemory"
+        style="-fx-background-color:#2b87d1"
+        stylesheets="/FXMLpages/custom.css"
+        prefHeight="600" prefWidth="1000">
+
+    <GridPane fx:id="board"
+              prefWidth="440" prefHeight="440"
+              layoutX="290" layoutY="120"
+              vgap="10" hgap="10"/>
+    <Pane   fx:id="boardMask"
+            prefWidth="440" prefHeight="440"
+            layoutX="290" layoutY="120"/>
+    <Button fx:id="start" text="Start"
+            prefWidth="100"
+            layoutX="450" layoutY="400"
+            onAction="#VisualMemoryClicked"/>
+    <Label  fx:id="levelLabel"
+            prefWidth="300"
+            textAlignment="CENTER"/>
+    <Label  fx:id="liveLabel"
+            layoutX="600" layoutY="35"
+            style="-fx-text-fill: white; -fx-font-size: 33"/>
+    <Button text="HUMAN BENCHMARK"
+            prefHeight="30"
+            focusTraversable="false"
+            onAction="#backToHomePage"/>
+</Pane>

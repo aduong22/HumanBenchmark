@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.TextFlow?>
+<Pane fx:id="root"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ManyPages.Typing"
+      style="-fx-background-color:#2b87d1"
+      stylesheets="/FXMLpages/custom.css"
+      prefHeight="600" prefWidth="1000">
+
+    <TextField  fx:id="inputText"
+                prefWidth="810" prefHeight="210"
+                layoutX="95" layoutY="195"
+                style="-fx-text-fill: transparent; -fx-background-radius: 15"
+                opacity="0.8"/>
+    <Pane       prefWidth="810" prefHeight="210"
+                layoutX="95" layoutY="195"/>
+    <TextFlow   fx:id="arrayText"
+                prefWidth="780"
+                layoutX="113" layoutY="207"
+                lineSpacing="3.2"
+                style="-fx-fill-height: red"
+                opacity="0.6"/>
+    <Button fx:id="start" text="Try again"
+            prefWidth="150" alignment="CENTER"
+            layoutX="425" layoutY="400"
+            textAlignment="CENTER"
+            onAction="#typingClicked"/>
+    <Label  fx:id="wpmLabel" text="Typing Test"
+            prefWidth="600" alignment="CENTER"
+            layoutX="200"
+            style="-fx-font-size: 60; -fx-text-fill: white"/>
+    <Label  fx:id="description" text="How many words per minute can you type?"
+            prefWidth="600" alignment="CENTER"
+            layoutX="200" layoutY="130"
+            style="-fx-font-size: 20; -fx-text-fill: white"/>
+    <Label  fx:id="elapsedTime"
+            prefWidth="600"
+            layoutX="200" layoutY="450" alignment="CENTER"
+            style="-fx-font-size: 20; -fx-text-fill: white;"/>
+    <Button text="HUMAN BENCHMARK"
+            prefHeight="30"
+            focusTraversable="false"
+            onAction="#backToHomePage"/>
+</Pane>
